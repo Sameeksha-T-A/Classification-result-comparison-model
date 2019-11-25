@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Algorithm Results</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+ 
+ 
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  
+  
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+  
+  
+  <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
+
+
+  </head>
+  <body style="background-image:url('{% static 'images/end.jpg' %}');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+
+<div class="mbr-table-cell">
+
+    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+        <div class="hamburger-icon"></div>
+    </button>
+    
+    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+        <li class="nav-item nav-btn"><a class="nav-link btn btn-black btn-black-outline" href="/"><font size="5" color = "black" outline="black">HOME PAGE</a></font>
+      
+    </ul>
+    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+        <div class="close-icon"></div>
+    </button>
+
+</div>
+<br/><br/>
+<div  class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="width:95%;margin: auto;border: 3px solid #fff;">
+
+<div class="container-fluid">
+<div class="row-sm-12">
+<div class="col-sm-12">
+	<h3><br/>
+		<font size="6">Classification Report:</font>
+	</h3>
+
+	<div class="row-sm-12">
+		<div class="col-sm-4">
+
+{% block content %}
+
+     {{ file1 | linebreaks }}
+
+		</div>
+	</div>
+
+	<div class="row-sm-12">
+		<div class="col-sm-4">
+			
+     {{ file2 | linebreaks }}
+
+		</div>
+	</div>
+	
+	<div class="row-sm-12">
+		<div class="col-sm-4">
+				
+     {{ file3 | linebreaks }}
+
+{% endblock %}
+
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+
+	<div  class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="width:100%;margin: auto;border: 3px solid #fff;">
+	<div class="row">
+		<div class="col-md-4">
+			 <span class="badge badge-default"><strong>Decision Tree</strong></span>
+			<div class="row">
+				<div class="col-md-12">
+								
+						<image style = "width: 400px; height: 300px;" alt= ""
+						    src = "data:image/png;base64,{{graphic1|safe}}" />					
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			 <span class="badge badge-default"><strong>SVM</strong></span>
+			<div class="row">
+				<div class="col-md-12">								
+
+						<image style = "width: 400px; height: 300px;" alt= ""
+						    src = "data:image/png;base64,{{graphic2|safe}}" />					
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			 <span class="badge badge-default"><strong>Random Forest</strong></span>
+			<div class="row">
+				<div class="col-md-12">								
+
+						<image style = "width: 400px; height: 300px;" alt= ""
+						    src = "data:image/png;base64,{{graphic3|safe}}" />					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div><br/><br/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

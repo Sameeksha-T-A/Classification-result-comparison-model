@@ -1,0 +1,169 @@
+{% block content %}
+
+{% load static %}
+
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="background-image: url(static/images/header.jpg);">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <title>Classification models</title>
+
+	    <meta name="description" content="Django Project">
+	    <meta name="author" content="Sameeksha">
+
+	    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="static/css/style.css" rel="stylesheet">
+
+	</head>
+	
+
+	<body>
+
+
+	    <div class="container-fluid">
+	    <br/><br/>
+		<div class="row-md">
+			<div class="col-md-14"> 
+					
+				<h3 class="text-center" >
+					<font size="25"><font color="white" style="font-family:cursive;">CLASSIFICATION MODELS!!!</font></font><br/><br/>
+
+					<div class="row">
+					<div class="col-md">
+						<img src= "static/images/image1.png" align="middle" class="img-fluid mb-0 mb-lg-0" alt="" width="300" height="400" ><br/><br/>					
+					</div>					
+					</div>
+					<p><font size="5"><font color="white" style="font-family:consolas;">
+					In machine learning and statistics, classification is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.
+				</p></font></font><br/><br/><br/>					
+				</h3>
+						
+			</div>
+		</div>
+	</body>
+
+
+
+
+<br/><br/>
+<div  class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="4" style="width:93%;margin: auto;border: 5px solid #fff;">
+	
+	<div class="row">			
+		<div class="col-md-4">				
+            <section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="background-image: url(static/images/blue.jpg);">        
+				<h2>
+					DECISION TREE
+				</h2>
+				<p>
+					Decision Tree algorithm belongs to the family of supervised learning algorithms.
+					The decision tree algorithm tries to solve the problem, by using tree representation. Each internal node of the tree corresponds to an attribute, and each leaf node corresponds to a class label.
+
+				</p>
+			</section>								
+		</div>
+		
+		<div class="col-md-4">
+			<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="background-image: url(static/images/pink.jpg);">
+				<h2>
+					SVM
+				</h2>
+				<p>
+					SVM or Support Vector Machine is a linear model for classification and regression problems.The algorithm creates a line or a hyperplane which separates the data into classes.SVM is an algorithm that takes the data as an input and outputs a line that separates those classes if possible.
+
+				</p>
+			</section>
+		</div>
+		<div class="col-md-4">
+			<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="background-image: url(static/images/green.jpg);">
+				<h2>
+					RANDOM FOREST
+				</h2>
+				<p>
+					Random forest algorithm is a supervised classification algorithm which creates the forest with a number of trees.The more trees in the forest the more robust the forest looks like. Similarly in random forest classifier, the higher the number of trees in the forest gives the high accuracy results.
+				
+				</p>
+			</section>
+		</div>
+	</div>
+</div>
+
+	<br/><br/><br/>
+
+	<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="width:90%;margin: auto;border: 5px solid #fff ;">
+
+	<legend><font size="9"><font color="white" style="font-family:cursive">CLASSIFIERS:</legend></font></font>
+	<legend><font size="5"><font color="white" style="font-family:cursive">Let us start building the machine learning model to classify any given dataset.</legend></font></font></section>
+	
+	
+	<br/>
+
+
+	<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="width:50%;margin: auto;border: 5px solid #fff ;">
+
+	<form class="form-horizintal" action="" method="post" enctype="multipart/form-data">
+	    {% csrf_token %}
+	<fieldset>
+
+	<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="2" style="background-image: url(static/images/header.jpg);">
+
+	<center>
+	<!-- Form Name -->
+	<br/><br/>
+	<legend><font size="8"><font color="white">RESULT COMPARISON MODEL</legend></font></font>
+	<legend><font size="5"><font color="white">(Decision tree, SVM & Random forest)</legend></font></font><br/>
+
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="emailid"><font size="5" color = "white">EMAIL ID :</font></label>
+	  <div class="col-md-4">
+	  <input id="emailid" name="emailid" placeholder="Enter your email" class="form-control input-md" required="required" value="{{ emailid }}" type="text" >
+
+	  </div>
+	</div><br/>
+
+<!-- File Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="csv_file"><font size="5" color = "white">UPLOAD FILE:</label>
+  <div class="col-md-4">
+    <input id="csv_file" name="csv_file" value="{{ csv_file }}" class="input-file" accept=".csv" type="file">
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary"><font size="5" align= "centre">SUBMIT</button></font><br/><br/>
+  </div>
+</div>
+</center>
+</fieldset>
+</form>
+</section>
+
+	<div  class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background mbr-after-navbar" id="header1-1" data-rv-view="4" style="width:93%;margin: auto;border: 5px solid #fff;">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center"><br/>
+				<font size="9" color = "white">CONTACT US:</font>
+			</h3> 
+			<address><font color = "white">
+				 <strong>Ms. Sameeksha Anthony</strong><br> School of Information Sciences.<br> Manipal, 123456<br> Mob:+91-9988776655<br>EmailID: abcdefgh@gmail.com 
+			</address><br/></font>
+		</div>
+	</div></div>
+</section>
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/scripts.js"></script>
+</html>
+
+{% endblock %}
